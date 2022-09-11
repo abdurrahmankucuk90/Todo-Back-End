@@ -1,9 +1,10 @@
 {% extends 'todo/base.html' %} 
 
-{% block context %}
-<form action="">
-  {% csrf_token %} {{form}}
+{% block content %}
+<form action="" method='POST'>
+  {% csrf_token %}
+   {{form.as_p}}
   <input type="submit" value="add" />
 </form>
 
-{% endblock context %}
+{% endblock content %}
