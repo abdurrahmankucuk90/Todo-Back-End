@@ -1,0 +1,8 @@
+.navbar{
+    background-color: cadetblue;
+}
+.homeContainer{
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem auto;
+}

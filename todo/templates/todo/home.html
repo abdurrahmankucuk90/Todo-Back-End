@@ -1,19 +1,24 @@
 {% extends 'todo/base.html' %} 
 {% block content %}
 
-<form action="/add/" method='POST'>
-  {% csrf_token %}
-   {{form.as_p}}
-  <input type="submit" value="add" />
-</form>
+<div class="homeContainer">
 
+  <form action="/add/" method='POST'>
+    {% csrf_token %}
+     {{form.as_p}}
+    <input type="submit" value="add" />
+  </form>
+  
+  
+  <ul>
+    {% for todo in todos %}
+  
+    <li >{{todo}}</li>
+  
+    {% endfor %}
+  </ul>
 
-<ul>
-  {% for todo in todos %}
+</div>
 
-  <li >{{todo}}</li>
-
-  {% endfor %}
-</ul>
 
 {% endblock content %}
